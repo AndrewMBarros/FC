@@ -270,3 +270,161 @@ numero1, numero2, numero3 = numeros()
 ordem (numero1, numero2, numero3)
 
 # ------------------------------------------------- -------------------------------------------------- ---------- #
+10 - Faça um Programa que pergunte em que turno você estuda.
+Peça para digitar M-matutino ou V-Vespertino ou N- Noturno.
+Imprima a mensagem "Bom Dia!", "Boa Tarde!" ou "Boa Noite!" ou "Valor Inválido!", conforme o caso.
+
+def periodo ():
+    turno = str(input('Digite o turno o qual você estuda: '))
+
+    return turno
+
+def comparacao (turno):
+    if turno == 'm':
+        print(f' Bom dia! Você estuda no turno {turno}')
+    elif turno == 'v':
+        print (f' Boa tarde! Você estuda no turno {turno}')
+    elif turno == 'n':
+        print(f' Boa noite! Você estuda no turno {turno}')
+    else:
+        print(f'Valor inválido! Escolha um turno corretamente')
+
+turno = periodo()
+comparacao (turno)
+
+# ------------------------------------------------- -------------------------------------------------- ---------- #
+11 - As Organizações Tabajara resolveram dar um aumento de salário aos seus colaboradores e
+    lhe contraram para desenvolver o programa que calculará os reajustes.
+    Faça um programa que recebe o salário de um colaborador e o reajuste segundo o seguinte critério, baseado no salário atual:
+        salários até R$ 280,00 (incluindo) : aumento de 20%
+        salários entre R$ 280,00 e R$ 700,00 : aumento de 15%
+        salários entre R$ 700,00 e R$ 1500,00 : aumento de 10%
+        salários de R$ 1500,00 em diante : aumento de 5% Após o aumento ser realizado, informe na tela:
+            o salário antes do reajuste;
+            o percentual de aumento aplicado;
+            o valor do aumento;
+            o novo salário, após o aumento.
+
+def dinheiro ():
+    salario = float(input('Digite o seu salário: '))
+
+    return salario
+
+def reajuste (salario):
+    if salario <= 280.0:
+        novo20sal = (salario * 0.20) + salario
+        print(f'O novo salário é de {novo20sal}')
+
+    elif 280 < salario < 700.0:
+        novo15sal = (salario * 0.15) + salario
+        print(f'O novo salário é de {novo15sal}')
+
+    elif 700 < salario < 1500.0:
+        novo10sal = (salario * 0.10) + salario
+        print(f'O novo salário é de {novo10sal}')
+
+    elif salario <= 1500:
+        novo5sal = (salario * 0.05) + salario
+        print (f'O novo salario é de {novo5sal}')
+            
+
+salario = dinheiro ()
+reajuste (salario)
+
+# ------------------------------------------------- -------------------------------------------------- ---------- #
+13 - Faça um Programa que leia um número e exiba o dia correspondente da semana.
+    (1-Domingo, 2- Segunda, etc.), se digitar outro valor deve aparecer valor inválido.
+
+def calendario ():
+    dia = int(input('Digite um dia: '))
+
+    return dia
+
+def verificacao (dia):
+
+    if dia == 1:
+        print(f'Você digitou o dia {dia} que equivale ao Domingo')
+    elif dia == 2:
+        print(f'Você digitou o dia {dia} que equivale a Segunda Feira')
+    elif dia == 3:
+        print(f'Você digitou o dia {dia} que equivale a Terça Feira')
+    elif dia == 4:
+        print(f'Você digitou o dia {dia} que equivale a Quarta Feira')
+    elif dia == 5:
+        print(f'Você digitou o dia {dia} que equivale a Quinta Feira')
+    elif dia == 6:
+        print(f'Você digitou o dia {dia} que equivale a Sexta Feira')
+    elif dia == 7:
+        print(f'Você digitou o dia {dia} que equivale ao Sábado ')
+    else:
+        print(f'Você digitou o dia {dia} que está errado')
+
+dia = calendario ()
+verificacao (dia)
+
+# ------------------------------------------------- -------------------------------------------------- ---------- #
+14 - Faça um programa que lê as duas notas parciais obtidas por um aluno numa disciplina ao longo de um semestre,
+    e calcule a sua média. A atribuição de conceitos obedece à tabela abaixo:
+
+    Média de Aproveitamento  Conceito
+    Entre 9.0 e 10.0        A
+    Entre 7.5 e 9.0         B
+    Entre 6.0 e 7.5         C
+    Entre 4.0 e 6.0         D
+    Entre 4.0 e zero        E
+
+O algoritmo deve mostrar na tela as notas, a média, o conceito correspondente e
+a mensagem “APROVADO” se o conceito for A, B ou C ou “REPROVADO” se o conceito for D ou E.
+
+def notas ():
+    nota1 = float(input('Digite a sua primeira nota: '))
+    nota2 = float(input('Digite a sua segunda nota: '))
+    media = (nota1 + nota2) / 2 
+    return nota1, nota2, media 
+
+def atribuicao (media):
+    if 9 <= media <= 10.0:
+        print(f'O conceito é A e a sua média é {media}, logo você está Aprovado')
+    elif 7.5 <= media < 9.0:
+        print(f'O conceito é B e a sua média é {media}, logo você está Aprovado')
+    elif 6.0 <= media < 7.5:
+        print(f'O conceito é C e a sua média é {media}, logo você está Aprovado')
+    elif 4.0 <= media < 6.0:
+        print(f'O conceito é D e a sua média é {media}, logo você está Reprovado')
+    elif 0 <= media < 4.0:
+        print(f'O conceito é E e a sua média é {media}, logo você está Reprovado')
+
+nota1,nota2,media = notas()
+atribuicao (media)
+
+# ------------------------------------------------- -------------------------------------------------- ---------- #
+16 - Faça um programa que calcule as raízes de uma equação do segundo grau, na forma ax2 + bx + c.
+
+    O programa deverá pedir os valores de a, b e c e fazer as consistências, informando ao usuário nas seguintes situações:
+        Se o usuário informar o valor de A igual a zero, a equação não é do segundo grau e o programa não deve fazer pedir os demais valores, sendo encerrado;
+        Se o delta calculado for negativo, a equação não possui raizes reais. Informe ao usuário e encerre o programa;
+        Se o delta calculado for igual a zero a equação possui apenas uma raiz real; informe-a ao usuário;
+        Se o delta for positivo, a equação possui duas raiz reais; informe-as ao usuário;
+
+def raizes ():
+    a = int(input('Digite o valor de a: '))
+    b = int(input('Digite o valor de b: '))
+    c = int(input('Digite o valor de c: '))
+    delta = b**2 - 4 * a * c
+
+    if a == 0:
+        print(f' A equação não é do segundo grau')
+    
+
+    elif delta < 0:
+        print(f' A equação não possui raizes reais')
+
+    elif delta == 0:
+        print(f' A equação possui apenas uma raiz real')
+
+    elif delta > 0:
+        print(f' A equação possui duas raizes reais')
+    return a, b, c, delta
+
+a, b, c, delta = raizes ()
+
