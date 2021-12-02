@@ -428,3 +428,187 @@ def raizes ():
 
 a, b, c, delta = raizes ()
 
+# ------------------------------------------------- -------------------------------------------------- ---------- #
+20 - Faça um Programa para leitura de três notas parciais de um aluno.
+O programa deve calcular a média alcançada por aluno e presentar:
+
+    A mensagem "Aprovado", se a média for maior ou igual a 7, com a respectiva média alcançada;
+
+    A mensagem "Reprovado", se a média for menor do que 7, com a respectiva média alcançada;
+
+    A mensagem "Aprovado com Distinção", se a média for igual a 10.
+
+def notas ():
+    nota1 = float(input('Digite a primeira nota: '))
+    nota2 = float(input('Digite a segunda nota: '))
+    nota3 = float(input('Digite a terceira nota: '))
+
+    media = (nota1 + nota2 + nota3) / 3
+
+    return media
+
+def situacao (media):
+    if 10.0 > media >= 7.0:
+        print('Aprovado')
+    elif media < 7.0:
+        print('Reprovado')
+    elif media == 10.0:
+        print('Aprovado com Distinção')
+
+    return media
+
+media = notas ()
+situacao (media)
+
+# ------------------------------------------------- -------------------------------------------------- ---------- #
+22 - Faça um Programa que peça um número inteiro
+    e determine se ele é par ou impar.
+
+    Dica: utilize o operador módulo (resto da divisão).
+
+def inteiro ():
+    numero = int(input('Digite um número: '))
+
+    if numero % 2 == 1 :
+        print(f'Esse número que você digitou {numero} é impar')
+    else:
+        print(f'Esse número que você digitou {numero} é par')
+
+    return numero
+
+numero = inteiro()
+
+# ------------------------------------------------- -------------------------------------------------- ---------- #
+23 - Faça um Programa que peça um número
+    e informe se o número é inteiro ou decimal.
+    Dica: utilize uma função de arredondamento.
+
+def numeroqualquer ():
+    numero = float(input('Digite um número: '))
+
+    if numero != round(numero):
+        print(f'Esse número que você digitou {numero} é decimal')
+    else:
+        print(f'Esse número que você digitou {numero} é inteiro')
+
+    return numero
+
+numero = numeroqualquer ()
+
+# ------------------------------------------------- -------------------------------------------------- ---------- #
+24 - Faça um Programa que leia 2 números e
+    em seguida pergunte ao usuário qual operação ele deseja realizar.
+    
+    O resultado da operação deve ser acompanhado de uma frase que diga
+    
+    se o número é:
+    par ou ímpar;
+    positivo ou negativo;
+    inteiro ou decimal.
+
+def numeros ():
+    numero1 = float(input('Digite o primeiro número: '))
+    numero2 = float(input('Digite o segundo número: '))
+    operacao = int(input('Qual operação você deseja usar? \n [1] - Adição \n [2] - Subtração \n [3] - Multiplicação \n [4] - Divisão: '))
+
+    return numero1, numero2, operacao
+
+def resultado (operacao):
+    if operacao == 1:
+        soma = numero1 + numero2
+        
+        if soma % 2 == 1:
+            print(f'A soma dos dois números digitados {numero1} e {numero2} é: {soma} e ele é impar')
+        else:
+            print(f'A soma dos dois números digitados {numero1} e {numero2} é: {soma} e ele é par')
+
+        if soma < 0:
+                print(f'A soma dos dois números digitados {numero1} e {numero2} é: {soma} e ele é negativo')
+
+        
+        elif soma == 0:
+            print(f'A soma dos dois números digitados {numero1} e {numero2} é: {soma} e ele é neutro')
+
+        else:
+            print(f'A soma dos dois números digitados {numero1} e {numero2} é: {soma} e ele é positivo')
+
+        if soma == round (soma):
+            print(f'A soma dos dois números digitados {numero1} e {numero2} é: {soma} e ele é inteiro')
+        else:
+            print(f'A soma dos dois números digitados {numero1} e {numero2} é: {soma} e ele é decimal')
+
+    if operacao == 2:
+        subtracao = numero1 - numero2
+
+        if subtracao % 2 == 1:
+            print(f'A subracao dos dois números digitados {numero1} e {numero2} é: {subtracao} e ele é impar')
+        else:
+            print(f'A subracao dos dois números digitados {numero1} e {numero2} é: {subracao} e ele é par')
+
+        if subracao < 0:
+            print(f'A subracao dos dois números digitados {numero1} e {numero2} é: {subracao} e ele é negativo')
+
+        
+        elif subracao == 0:
+            print(f'A subracao dos dois números digitados {numero1} e {numero2} é: {subracao} e ele é neutro')
+
+        else:
+            print(f'A subracao dos dois números digitados {numero1} e {numero2} é: {subracao} e ele é positivo')
+
+        if subracao == round (subtracao):
+            print(f'A subracao dos dois números digitados {numero1} e {numero2} é: {subracao} e ele é inteiro')
+
+        else:
+            print(f'A subracao dos dois números digitados {numero1} e {numero2} é: {subracao} e ele é decimal')
+        
+
+    if operacao == 3:
+        multiplicacao = numero1 * numero2
+        
+        if multiplicacao % 2 == 1:
+            print(f'A multiplicacao dos dois números digitados {numero1} e {numero2} é: {multiplicacao} e ele é impar')
+        else:
+            print(f'A multiplicacao dos dois números digitados {numero1} e {numero2} é: {multiplicacao} e ele é par')
+
+        if multiplicacao < 0:
+            print(f'A multiplicacao dos dois números digitados {numero1} e {numero2} é: {multiplicacao} e ele é negativo')
+        
+        elif multiplicacao == 0:
+            print(f'A multiplicacao dos dois números digitados {numero1} e {numero2} é: {multiplicacao} e ele é inteiro')
+
+        else:
+            print(f'A multiplicacao dos dois números digitados {numero1} e {numero2} é: {multiplicacao} e ele é positivo')
+
+        if multiplicacao == round (multiplicacao):
+            print(f'A multiplicacao dos dois números digitados {numero1} e {numero2} é: {multiplicacao} e ele é inteiro')
+        else:
+            print(f'A multiplicacao dos dois números digitados {numero1} e {numero2} é: {multiplicacao} e ele é decimal')
+        
+
+    if operacao == 4:
+        divisao = numero1 / numero2
+        
+        if divisao % 2 == 1:
+            print(f'A divisao dos dois números digitados {numero1} e {numero2} é: {divisao} e ele é impar')
+        else:
+            print(f'A divisao dos dois números digitados {numero1} e {numero2} é: {divisao} e ele é par')
+
+        if divisao == 0:
+            print(f'A divisao dos dois números digitados {numero1} e {numero2} é: {divisao} e ele é neutro')
+
+        elif divisao > 0:
+            print(f'A divisao dos dois números digitados {numero1} e {numero2} é: {divisao} e ele é inteiro')
+
+        else:   
+            print(f'A divisao dos dois números digitados {numero1} e {numero2} é: {divisao} e ele é negativo')
+
+        if divisao == round (divisao):
+            print(f'A divisao dos dois números digitados {numero1} e {numero2} é: {divisao} e ele é inteiro')
+        else:
+            print(f'A divisao dos dois números digitados {numero1} e {numero2} é: {divisao} e ele é decimal')
+
+    return 
+
+
+numero1, numero2, operacao = numeros ()
+resultado (operacao)
