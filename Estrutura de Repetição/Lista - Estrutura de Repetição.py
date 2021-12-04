@@ -61,3 +61,69 @@ nome, senha = leitura ()
 analise (senha, nome)
 
 # ------------------------------------------------- -------------------------------------------------- ---------- #
+6 - Faça um programa que imprima na tela os números de 1 a 20,
+    um abaixo do outro.
+    Depois modifique o programa para que ele
+    mostre os números um ao lado do outro
+
+#um abaixo do outro
+def numeros ():
+    print(f'\nO números um abaixo do outro são:')
+    for i in  range (1,21):
+        print (i)
+        
+#um do lado do outro
+    print(f'\nO números um ao lado do outro são:')
+    for i in  range (1,21):
+        print(i, end = ' ')
+    return
+
+numeros ()
+
+# ------------------------------------------------- -------------------------------------------------- ---------- #
+7 - Faça um programa que leia 5 números e informe o maior número
+
+
+def numeros ():
+    maior = 0
+    for i in range (1,6):
+        numero = float(input('Digite um número: '))
+
+        if numero > maior:
+            maior = numero
+    print (f' O maior número digitado foi: {maior}')
+
+    return numero
+numero = numeros ()
+
+# ------------------------------------------------- -------------------------------------------------- ---------- #
+8 - Faça um programa que leia 5 números e
+    informe a soma e a média dos números
+
+def numeros ():
+    soma = 0
+
+    for i in range (1,6):
+        numero = float(input('Digite um número: '))
+        soma += numero 
+        media = soma /5
+        
+    print(f' A soma dos números é {soma} e a média é {media}')
+    return numero
+
+numero = numeros ()
+
+# ------------------------------------------------- -------------------------------------------------- ---------- #
+9 - Faça um programa que imprima na tela apenas os números ímpares
+    entre 1 e 50.
+
+def numeros():
+
+    print(f'\nO números ímpares entre 1 e 50 são:')
+    for i in range (1,51,2):
+        print(i)
+    return
+
+numeros ()
+
+# ------------------------------------------------- -------------------------------------------------- ---------- #
