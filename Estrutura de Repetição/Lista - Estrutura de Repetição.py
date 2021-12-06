@@ -256,6 +256,9 @@ def primo (numero):
     if contador == 2:
         print(f'O número que foi digitado {numero} é primo!  ')
 
+numero = leitura ()
+primo (numero)
+
 # ------------------------------------------------- -------------------------------------------------- ---------- #
 34 - Os números primos possuem várias aplicações dentro da Computação,
     por exemplo na Criptografia. Um número primo é aquele que é divisível
