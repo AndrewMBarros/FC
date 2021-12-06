@@ -315,3 +315,5 @@ def imprimir (h):
 numerador, denominador = leitura()
 h = calculo (numerador, denominador)
 imprimir (h)
+
+# ------------------------------------------------- -------------------------------------------------- ---------- #
