@@ -113,3 +113,63 @@ def imprimir (dados1, vogal, consoante):
 palavra = leitura ()
 dados1, vogal, consoante = analise (palavra)
 imprimir (dados1, vogal, consoante)
+
+# ------------------------------------------------- -------------------------------------------------- ---------- #
+7 - Elabore um programa para criptografar e decriptografar
+    uma mensagem seguindo o seguinte padrão:
+    Somar 2 ao código ascci de cada letra ou caracter.
+    Exibir o texto lido, criptografado e decriptografado.
+    O programa deverá ser modularizado com pelo menos 2 funções
+    Todas as respostas devem vir com mensagens explicativas
+
+
+def leitura ():
+    frase = str(input('Digite uma frase: '))
+    return frase
+
+def analise (frase):
+    novapalavra = ''
+    for i in frase:
+        novapalavra += chr(ord(i)-1)
+
+
+    print(f'A frase é {frase}')
+    print(f'Ela criptografada é: {novapalavra}')
+
+    return novapalavra
+
+frase = leitura ()
+analise (frase)
+
+# ------------------------------------------------- -------------------------------------------------- ---------- #
+10 - Dado uma string com uma frase informada pelo usuário
+    (incluindo espaços em branco), conte:
+    quantos espaços em branco existem na frase.
+
+    quantas vezes aparecem as vogais
+    (independentemente se são maiúsculas ou minúsculas)
+    O programa deverá ser modularizado com pelo menos 2 funções
+    Todas as respostas devem vir com mensagens explicativas
+
+def palavras ():
+    palavra = str(input('Digite uma palavra: '))
+
+    return palavra
+
+def analise (palavra):
+    
+    print ('A quantidade de espaço branco é {}'.format(palavra.count(' ')))
+    
+    print ('a letra a aparece {} vezes'.format(palavra.lower().count('a')))
+    print ('a letra e aparece {} vezes'.format(palavra.lower().count('e')))
+    print ('a letra i aparece {} vezes'.format(palavra.lower().count('i')))
+    print ('a letra o aparece {} vezes'.format(palavra.lower().count('o')))
+    print ('a letra u aparece {} vezes'.format(palavra.lower().count('u')))
+
+    
+    return
+
+palavra = palavras()
+analise (palavra)
+
+# ------------------------------------------------- -------------------------------------------------- ---------- #
