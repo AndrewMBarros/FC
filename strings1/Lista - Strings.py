@@ -173,3 +173,30 @@ palavra = palavras()
 analise (palavra)
 
 # ------------------------------------------------- -------------------------------------------------- ---------- #
+12 - Elabore um programa que leia uma quantidade indeterminada de nomes.
+    Exiba quantas vezes o nome
+    joão aparece independente de sua posição no nome.
+    O programa deverá ser modularizado com pelo menos 2 funções
+    Todas as respostas devem vir com mensagens explicativas
+
+def leitura():
+    contador = 0
+    while True:
+        try:
+            nome = str(input('Digite um nome ou sair para sair: ')).lower()
+            if nome.isnumeric():
+                raise
+            elif 'joao' in nome:
+                contador += 1
+            elif nome == 'sair': break
+        except:
+            print('Digite corretamete!')
+    return contador
+
+def analise(nome):
+    print(f'A Quantidade de vezes que o nome joao apareceu foi {contador}')
+
+    return contador
+
+contador = leitura()
+analise(contador)
