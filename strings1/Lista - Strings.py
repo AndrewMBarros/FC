@@ -200,3 +200,75 @@ def analise(nome):
 
 contador = leitura()
 analise(contador)
+
+# ------------------------------------------------- -------------------------------------------------- ---------- #
+15 - Faça um programa que leia um número de telefone,
+    e corrija o número no caso deste conter somente 7 dígitos,
+    acrescentando o '3' na frente.
+
+    O usuário pode informar o número com ou sem o traço separador.
+    Exibir o numero do telefone formatado.(ver exemplo)
+    Exemplo:
+    Valida e corrige número de telefone
+    Telefone: 461-0133
+    Telefone possui 7 dígitos. Vou acrescentar o digito três na frente.
+    Telefone corrigido sem formatação: 34610133
+    Telefone corrigido com formatação: 3461-0133
+
+    O programa deverá ser modularizado com pelo menos 2 funções
+    Todas as respostas devem vir com mensagens explicativas
+
+def leitura ():
+    numero = str(input('Digite o número do telefone de 8 algarismos: '))
+    return numero
+
+def analise (numero):
+    if len(numero) < 8:
+        
+        print('Telefone: {}'.format(numero))
+        print('o numero digitado possui {} algarismos. Vou acrescentar o digito três na frente.'.format(len(numero)))
+        print(f'O numero corigido sem formatação é 3{numero}')
+        print('o número corrigido com formatação é 3{}{}{}'.format(numero [0:4], '-', numero[4:8]))
+    else:
+        print('Telefone: {}'.format(numero))
+        print('o numero digitado possui {} algarismos. Está correto!'.format(len(numero)))
+        print('o número sem correção, mas com formatação é {}{}{}'.format(numero [0:4], '-', numero[4:8]))
+
+    return
+
+numero = leitura()
+analise (numero)
+
+# ------------------------------------------------- -------------------------------------------------- ---------- #
+17 - Elabore um programa para criptografar e
+    depois decriptografar uma mensagem seguindo o seguinte 
+    padrão: Para criptografar:Subtrair 1 ao código ascci de cada letra ou caracter.
+    Exibir o texto lido, criptografado e decriptografado.
+    O programa deverá ser modularizado com pelo menos 2 funções
+    Todas as respostas devem vir com mensagens explicativas
+
+def leitura ():
+    try:
+        frase = str(input('Digite uma string: '))
+        return frase
+
+    except:
+        print ('Digite corretamente')
+
+    return
+
+def analise (frase):
+    resultado = ''
+    for i in frase:
+        resultado += chr(ord(i)-1)
+
+    print(f'A string é: {frase}')
+    print(f'O resultado é: {resultado}')
+
+
+    return resultado
+
+frase = leitura ()
+analise (frase)
+
+# ------------------------------------------------- -------------------------------------------------- ---------- #
