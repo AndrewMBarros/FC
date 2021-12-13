@@ -2,7 +2,7 @@
 
 def entrada ():    
 
-    print(' Alo mundo')
+    print('Alo mundo')
 
     return 
 
@@ -20,7 +20,6 @@ def numero ():
     return
 
 numero ()
-
 
 # ------------------------------------------------- -------------------------------------------------- ---------- #
 3 - Faça um Programa que peça dois números e imprima a soma.
@@ -42,8 +41,6 @@ def soma (a,b):
 
 a, b = entrada ()
 soma (a,b)
-
-
 
 # ------------------------------------------------- -------------------------------------------------- ---------- #
 4. Faça um Programa que peça as 4 notas bimestrais e mostre a média.
@@ -69,7 +66,6 @@ def media (a,b,c,d):
 a, b, c, d = entrada ()
 media (a,b,c,d)
 
-
 # ------------------------------------------------- -------------------------------------------------- ---------- #
 5 - Faça um Programa que converta metros para centímetros.
 
@@ -84,7 +80,6 @@ def entrada ():
     return
 
 entrada ()
-
 
 # ------------------------------------------------- -------------------------------------------------- ---------- #
 6. Faça um Programa que peça o raio de um círculo, calcule e mostre sua área.
@@ -260,6 +255,3 @@ altura = inicio ()
 massas (altura)
 
 # ------------------------------------------------- -------------------------------------------------- ---------- #
-
-
-
