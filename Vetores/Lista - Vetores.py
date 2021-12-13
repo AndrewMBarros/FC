@@ -1,7 +1,7 @@
-''' 1 - Elabore um programa que leia o vetor A com 5 valores inteiros.
+ 1 - Elabore um programa que leia o vetor A com 5 valores inteiros.
     Determine umvetor com a seguinte lei de formação: Os termos de ordem
         impar de A são 
-    multiplicados por 3 Os termos de ordem par de A são multiplicados por 2'''
+    multiplicados por 3 Os termos de ordem par de A são multiplicados por 2
 
 def inicio ():
     vetor = []
@@ -58,3 +58,47 @@ def analise (vet1, vet2, vet3, cont):
 
 vet1, vet2, vet3, cont = inicio ()
 analise (vet1, vet2, vet3, cont)
+
+# ------------------------------------------------- -------------------------------------------------- ---------- #
+8 -  Elabore um programa que leia uma matriz quadrada de tamanho mxm
+    elementos inteiros e, verifique se a matriz ´e identidade.
+    Imprimir a matriz lida
+    sob a forma de tabela e o resultado obtido.
+
+def inicio ():
+    flag = 0
+    tamanho = int(input('Digite o tamanho da matriz quadrada: '))
+    matriz1 = []
+
+    return flag, tamanho, matriz1
+
+def analise (flag, tamanho, matriz1):
+    for i in range (0, tamanho):
+        matriz1.append(0)
+        matriz1[i] = []
+        for j in range (0, tamanho):
+            elem = int(input(f'Digite o elemento da linha {i+1} e coluna {j+1}: '))
+            matriz1[i].append(elem)
+
+    for linha in range(0,tamanho):
+        for coluna in range (0, tamanho):
+            if ((linha == coluna) and (matriz1[linha][coluna] != 1)):
+                flag = -1
+            elif ((linha != coluna) and (matriz1[linha][coluna] != 0)):
+                flag = -1
+
+    for linha in range(0, tamanho):
+        for coluna in range(0,tamanho):
+            print(f'{matriz1[linha][coluna]}', end = " ")
+        print ()
+
+    if flag == 0:
+        print('A matriz é identidade')
+    else:
+        print('A matriz não é identidade')
+
+    return elem
+
+flag, tamanho, matriz1 = inicio ()
+analise (flag, tamanho, matriz1)
+
