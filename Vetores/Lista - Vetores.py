@@ -102,3 +102,55 @@ def analise (flag, tamanho, matriz1):
 flag, tamanho, matriz1 = inicio ()
 analise (flag, tamanho, matriz1)
 
+# ------------------------------------------------- -------------------------------------------------- ---------- #
+17 - Elabore um programa Python que armazene em duas listas uma quantidade
+    indeterminada de nomes e salÃ¡rios. Depois verifique se um determinado nome
+    se encontra entre os valores lidos. Caso exista exibir o nome e o salario ou
+    mensagem indicativa. Usar pesquisa binaria. Flag a livre escolha
+
+def inicio ():
+    
+
+    nomes = []
+    salario = []
+    flag = -1
+
+    n = input("Digite nome (s p/ sair): ")
+
+    return nomes, salario, flag, n
+
+def analise (nomes, salario, flag, n):
+    
+    while n != 's':
+        nomes.append(n)
+        pag = int(input("Digite salario: "))
+        salario.append(pag)
+        n = input("Digite nome (s p/ sair): ")
+
+
+def pesquisa (nomes):
+    nomep = input('Nome a procurar: ')
+    inicio = 0
+    fim = len (nomes) -1
+    achei = False
+
+    while inicio <= fim:
+        meio = (inicio + fim) // 2
+        if nomes[meio] == nomep:
+            achei = True
+            break
+        elif nomep > nomes[meio]:
+            inicio = meio + 1
+        else:
+            fim = meio - 1
+    if achei:
+        print('Achei')
+        return meio
+    else:
+        print('nao achei')
+        return - 1
+
+
+nomes, salario, flag, n = inicio ()
+analise (nomes, salario, flag, n)
+pesquisa (nomes)
