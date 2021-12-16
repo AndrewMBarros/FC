@@ -154,3 +154,45 @@ def pesquisa (nomes):
 nomes, salario, flag, n = inicio ()
 analise (nomes, salario, flag, n)
 pesquisa (nomes)
+
+# ------------------------------------------------- -------------------------------------------------- ---------- #
+18 - Elabore um programa Python que armazene em duas listas uma quantidade
+    indeterminada de nomes e salários. Depois verifique se um determinado nome
+    se encontra entre os valores lidos. Caso exista exibir o nome e o salario ou
+    mensagem indicativa. Usar pesquisa sequencial. Flag a livre escolha
+
+def inicio ():
+    
+
+    nomes = []
+    salario = []
+    flag = -1
+
+    n = input("Digite nome (s p/ sair): ")
+
+    return nomes, salario, flag, n
+
+def analise (nomes, salario, flag, n):
+    
+    while n != 's':
+        nomes.append(n)
+        pag = int(input("Digite salario: "))
+        salario.append(pag)
+        n = input("Digite nome (s p/ sair): ")
+
+    nome = input("Insira um nome para busca: ")
+
+    for i in range(0, len(nomes)):
+        if (nome == nomes[i]):
+            print(f"O nome foi encontrado. Nome: {nomes[i]} Salario: {salario[i]}.")
+            flag = 0
+            break
+
+    if flag == -1:
+        print("O nome não foi encontrado.")
+    return
+
+nomes, salario, flag, n = inicio ()
+analise (nomes, salario, flag, n)
+
+
