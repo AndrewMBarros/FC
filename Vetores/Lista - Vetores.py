@@ -155,6 +155,7 @@ nomes, salario, flag, n = inicio ()
 analise (nomes, salario, flag, n)
 pesquisa (nomes)
 
+<<<<<<< HEAD
 # ------------------------------------------------- -------------------------------------------------- ---------- #
 18 - Elabore um programa Python que armazene em duas listas uma quantidade
     indeterminada de nomes e salários. Depois verifique se um determinado nome
@@ -196,3 +197,5 @@ nomes, salario, flag, n = inicio ()
 analise (nomes, salario, flag, n)
 
 
+=======
+>>>>>>> 84d2e0149c4c57034f43785bb1c3faf5d3f54eb0
